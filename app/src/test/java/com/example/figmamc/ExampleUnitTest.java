@@ -1,4 +1,4 @@
-package com.example.photolle;
+package com.example.figmamc;
 
 import org.junit.Test;
 
