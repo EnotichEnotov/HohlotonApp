@@ -4,7 +4,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.moshi.MoshiConverterFactory;
 
 public class RetrofitService {
-    private static final String BASE_URL="http://25.41.90.83:8082";
+    private static final String BASE_URL="http://25.41.90.83:8080";
     private static Retrofit retrofit;
 
     private static Retrofit create(){

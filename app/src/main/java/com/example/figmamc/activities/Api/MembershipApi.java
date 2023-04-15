@@ -1,4 +1,4 @@
-package com.example.figmamc.activities.MembershipApi;
+package com.example.figmamc.activities.Api;
 
 
 import com.example.figmamc.activities.Entity.Membership;

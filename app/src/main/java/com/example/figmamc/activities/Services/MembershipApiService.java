@@ -1,6 +1,6 @@
 package com.example.figmamc.activities.Services;
 
-import com.example.figmamc.activities.MembershipApi.MembershipApi;
+import com.example.figmamc.activities.Api.MembershipApi;
 
 public class MembershipApiService {
     private static MembershipApi membershipApi;
