@@ -1,0 +1,48 @@
+ {
+  "project_info": {
+    "project_number": "484118144038",
+    "firebase_url": "https://battle-867f7-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "battle-867f7",
+    "storage_bucket": "battle-867f7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:484118144038:android:344f62f06cbbb7398172e7",
+        "android_client_info": {
+          "package_name": "com.example.figmamc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "484118144038-sk6jitfal8dp4blvfq0it9a3d5lrcvgl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.figmamc",
+            "certificate_hash": "b44cc0ea6d29bf4c98e818f6b7186a126ae9befb"
+          }
+        },
+        {
+          "client_id": "484118144038-1e67d249gpthqmgfmotimeq7err7c3l7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAknnA1jBk8GhBN4XnOiGP82DJF2WsOOqE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "484118144038-1e67d249gpthqmgfmotimeq7err7c3l7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

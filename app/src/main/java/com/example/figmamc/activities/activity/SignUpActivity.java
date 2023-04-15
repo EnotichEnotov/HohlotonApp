@@ -1,9 +1,11 @@
-package com.example.figmamc;
+package com.example.figmamc.activities.activity;
 
 import android.os.Bundle;
 import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.figmamc.R;
 
 
 public class SignUpActivity extends AppCompatActivity {
