@@ -7,11 +7,20 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 
+import com.example.figmamc.activities.Entity.Photo;
+import com.example.figmamc.activities.Services.PhotoApiService;
 import com.example.figmamc.activities.activity.Fragment.PhotoFragment;
 import com.example.figmamc.activities.activity.Fragment.ProfileFragment;
 import com.example.figmamc.databinding.ActivityMainBinding;
+
+import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity {
     ActivityMainBinding binding;
@@ -20,6 +29,17 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        PhotoApiService.getInstance().getPhotos().enqueue(new Callback<List<Photo>>() {
+            @Override
+            public void onResponse(Call<List<Photo>> call, Response<List<Photo>> response) {
+                Log.d("DEBUG",response.toString());
+            }
+
+            @Override
+            public void onFailure(Call<List<Photo>> call, Throwable t) {
+                t.printStackTrace();
+            }
+        });
         binding.pager.setAdapter(new MyPagerAdapter(getSupportFragmentManager()));
         binding.pager.setCurrentItem(1);
         binding.mainMenuIconButton1.setOnClickListener(new View.OnClickListener() {
