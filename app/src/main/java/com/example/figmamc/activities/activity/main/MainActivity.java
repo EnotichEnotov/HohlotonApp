@@ -6,12 +6,14 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 
 import com.example.figmamc.activities.Entity.Photo;
 import com.example.figmamc.activities.Services.PhotoApiService;
+import com.example.figmamc.activities.activity.CameraActivity;
 import com.example.figmamc.activities.activity.Fragment.PhotoFragment;
 import com.example.figmamc.activities.activity.Fragment.ProfileFragment;
 import com.example.figmamc.databinding.ActivityMainBinding;
@@ -66,6 +68,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 binding.pager.setCurrentItem(3);
+            }
+        });
+        binding.adder.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, CameraActivity.class);
+                startActivity(intent);
             }
         });
     }
