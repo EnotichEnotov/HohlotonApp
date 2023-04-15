@@ -3,6 +3,7 @@ package com.example.figmamc.activities.activity;
 import android.Manifest;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.util.Log;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -65,6 +66,7 @@ public class CameraActivity extends AppCompatActivity {
                     }
                 },
                 ContextCompat.getMainExecutor(this));
+        Log.i("III", "startCamera: bebra");
     }
 
     @Override
