@@ -1,9 +1,13 @@
 package com.example.figmamc;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.core.view.GravityCompat;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentPagerAdapter;
 
 import android.content.res.ColorStateList;
 import android.graphics.BlendMode;
@@ -16,67 +20,71 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+import com.example.figmamc.databinding.ActivityMainBinding;
 import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.textfield.TextInputLayout;
 
 public class MainActivity extends AppCompatActivity {
-
+    ActivityMainBinding binding;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        TextInputLayout etPhone = findViewById(R.id.til_phone_main);
-        TextInputLayout etEmail = findViewById(R.id.til_email_main);
-        TextInputLayout etInfo = findViewById(R.id.til_info_main);
-        MaterialToolbar toolbar = (MaterialToolbar) findViewById(R.id.mtb_main);
-        toolbar.setTitle("Имя");
-        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
+        binding.pager.setAdapter(new MyPagerAdapter(getSupportFragmentManager()));
+        binding.pager.setCurrentItem(1);
+        binding.mainMenuIconButton1.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Toast.makeText(MainActivity.this, "back", Toast.LENGTH_SHORT).show();
+            public void onClick(View v) {
+                binding.pager.setCurrentItem(0);
             }
         });
-        toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
+        binding.mainMenuIconButton2.setOnClickListener(new View.OnClickListener() {
             @Override
-            public boolean onMenuItemClick(MenuItem item) {
-                switch (item.getItemId()){
-                    case R.id.edit:
-                        item.setEnabled(false);
-                        FloatingActionButton button = new FloatingActionButton(MainActivity.this);
-                        CoordinatorLayout layout = findViewById(R.id.coordinatorLayout_main);
-                        CoordinatorLayout.LayoutParams params = new CoordinatorLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-                        params.setAnchorId(R.id.til_info_main);
-                        button.setTranslationY(200);
-                        button.setImageResource(R.drawable.ready_icon);
-                        params.anchorGravity = GravityCompat.END | Gravity.BOTTOM;
-                        layout.addView(button, params);
-                        etPhone.setBoxStrokeWidth(5);
-                        etEmail.setBoxStrokeWidth(5);
-                        etInfo.setBoxStrokeWidth(5);
-                        etPhone.setEnabled(true);
-                        etEmail.setEnabled(true);
-                        etInfo.setEnabled(true);
-                        etPhone.requestFocus();
-                        button.setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View view) {
-                                etPhone.setEnabled(false);
-                                etEmail.setEnabled(false);
-                                etInfo.setEnabled(false);
-                                etPhone.setBoxStrokeWidth(0);
-                                etEmail.setBoxStrokeWidth(0);
-                                etInfo.setBoxStrokeWidth(0);
-                                item.setEnabled(true);
-                                layout.removeView(button);
-                            }
-                        });
-                        break;
-                    case R.id.exit:
-                        Toast.makeText(MainActivity.this, "EXIT", Toast.LENGTH_SHORT).show();
-                }
-                return false;
+            public void onClick(View v) {
+                binding.pager.setCurrentItem(1);
             }
         });
+        binding.mainMenuIconButton3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                binding.pager.setCurrentItem(2);
+            }
+        });
+        binding.mainMenuIconButton4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                binding.pager.setCurrentItem(3);
+            }
+        });
+    }
+    class MyPagerAdapter extends FragmentPagerAdapter {
+
+        MyPagerAdapter(@NonNull FragmentManager fm) {
+            super(fm);
+        }
+
+        @Override
+        public int getCount() {
+            return 4;
+        }
+
+        @NonNull
+        @Override
+        public Fragment getItem(int position) {
+            switch (position%4) {
+                case 0:
+                    return new ProfileFragment();
+                case 1:
+                    return new ProfileFragment();
+                case 2:
+                    return new ProfileFragment();
+                case 3:
+                    return new ProfileFragment();
+                default:
+                    return new ProfileFragment();
+            }
+        }
     }
 }
