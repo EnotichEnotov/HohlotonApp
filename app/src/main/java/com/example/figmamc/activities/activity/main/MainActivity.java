@@ -1,29 +1,28 @@
-package com.example.figmamc;
+package com.example.figmamc.activities.activity.main;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-import androidx.coordinatorlayout.widget.CoordinatorLayout;
-import androidx.core.view.GravityCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
-import android.content.res.ColorStateList;
-import android.graphics.BlendMode;
-import android.graphics.drawable.ColorDrawable;
-import android.os.Build;
+import android.content.Intent;
 import android.os.Bundle;
-import android.view.Gravity;
-import android.view.MenuItem;
+import android.util.Log;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.Toast;
 
+import com.example.figmamc.activities.Entity.Photo;
+import com.example.figmamc.activities.Services.PhotoApiService;
+import com.example.figmamc.activities.activity.CameraActivity;
+import com.example.figmamc.activities.activity.Fragment.PhotoFragment;
+import com.example.figmamc.activities.activity.Fragment.ProfileFragment;
 import com.example.figmamc.databinding.ActivityMainBinding;
-import com.google.android.material.appbar.MaterialToolbar;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.textfield.TextInputLayout;
+
+import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity {
     ActivityMainBinding binding;
@@ -32,6 +31,19 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        PhotoApiService.getInstance().getPhotos().enqueue(new Callback<List<Photo>>() {
+            @Override
+            public void onResponse(Call<List<Photo>> call, Response<List<Photo>> response) {
+                Log.d("DEBUG",response.body().toString());
+            }
+
+            @Override
+            public void onFailure(Call<List<Photo>> call, Throwable t) {
+                Log.d("RBBEB","SFSDF");
+                Log.d("RBBEB",t.toString());
+                t.printStackTrace();
+            }
+        });
         binding.pager.setAdapter(new MyPagerAdapter(getSupportFragmentManager()));
         binding.pager.setCurrentItem(1);
         binding.mainMenuIconButton1.setOnClickListener(new View.OnClickListener() {
@@ -58,6 +70,13 @@ public class MainActivity extends AppCompatActivity {
                 binding.pager.setCurrentItem(3);
             }
         });
+        binding.adder.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, CameraActivity.class);
+                startActivity(intent);
+            }
+        });
     }
     class MyPagerAdapter extends FragmentPagerAdapter {
 
@@ -75,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
         public Fragment getItem(int position) {
             switch (position%4) {
                 case 0:
-                    return new ProfileFragment();
+                    return new PhotoFragment();
                 case 1:
                     return new ProfileFragment();
                 case 2:
