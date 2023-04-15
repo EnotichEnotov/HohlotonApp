@@ -1,4 +1,4 @@
-package com.example.figmamc;
+package com.example.figmamc.activities.activity.Fragment;
 
 import android.os.Bundle;
 import android.view.Gravity;
@@ -15,6 +15,7 @@ import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.core.view.GravityCompat;
 import androidx.fragment.app.Fragment;
 
+import com.example.figmamc.R;
 import com.example.figmamc.databinding.MenuProfileFragmentBinding;
 import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;

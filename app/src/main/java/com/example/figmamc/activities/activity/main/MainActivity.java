@@ -1,29 +1,17 @@
-package com.example.figmamc;
+package com.example.figmamc.activities.activity.main;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-import androidx.coordinatorlayout.widget.CoordinatorLayout;
-import androidx.core.view.GravityCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
-import android.content.res.ColorStateList;
-import android.graphics.BlendMode;
-import android.graphics.drawable.ColorDrawable;
-import android.os.Build;
 import android.os.Bundle;
-import android.view.Gravity;
-import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.Toast;
 
+import com.example.figmamc.activities.activity.Fragment.PhotoFragment;
+import com.example.figmamc.activities.activity.Fragment.ProfileFragment;
 import com.example.figmamc.databinding.ActivityMainBinding;
-import com.google.android.material.appbar.MaterialToolbar;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.textfield.TextInputLayout;
 
 public class MainActivity extends AppCompatActivity {
     ActivityMainBinding binding;
@@ -75,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
         public Fragment getItem(int position) {
             switch (position%4) {
                 case 0:
-                    return new ProfileFragment();
+                    return new PhotoFragment();
                 case 1:
                     return new ProfileFragment();
                 case 2:

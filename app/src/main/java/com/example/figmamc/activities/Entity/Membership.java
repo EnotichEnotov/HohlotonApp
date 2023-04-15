@@ -1,4 +1,7 @@
-package com.example.figmamc;
+package com.example.figmamc.activities.Entity;
+
+import androidx.annotation.NonNull;
+
 public class Membership {
     private long id;
     private long userId;
