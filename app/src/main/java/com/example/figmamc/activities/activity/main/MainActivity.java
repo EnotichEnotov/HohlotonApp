@@ -32,11 +32,13 @@ public class MainActivity extends AppCompatActivity {
         PhotoApiService.getInstance().getPhotos().enqueue(new Callback<List<Photo>>() {
             @Override
             public void onResponse(Call<List<Photo>> call, Response<List<Photo>> response) {
-                Log.d("DEBUG",response.toString());
+                Log.d("DEBUG",response.body().toString());
             }
 
             @Override
             public void onFailure(Call<List<Photo>> call, Throwable t) {
+                Log.d("RBBEB","SFSDF");
+                Log.d("RBBEB",t.toString());
                 t.printStackTrace();
             }
         });

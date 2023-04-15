@@ -36,11 +36,11 @@ public class PhotoFragment extends Fragment {
 
             }
         });
-        List<Photo> photos = new ArrayList<>();
+        //List<Photo> photos = new ArrayList<>();
         binding.posts.setAdapter(adapter);
         //photos.add(new Photo(0,0,
         //        "https://i.imgur.com/kmOj9Xe.png","Bebra"));
-        adapter.setItems(photos);
+        //adapter.setItems(photos);
         return binding.getRoot();
     }
     public void renderPhotos(List<Photo> photos){
