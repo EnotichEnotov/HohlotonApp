@@ -5,7 +5,7 @@
     android:layout_height="380dp">
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="500dp"
         android:background="@drawable/lenta_notes_background"
         android:alpha="0.5"
         ></ImageView>

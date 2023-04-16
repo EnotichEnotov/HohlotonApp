@@ -28,20 +28,13 @@ public class ProfileFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         binding = MenuProfileFragmentBinding.inflate(inflater);
-        TextInputLayout etPhone = binding.getRoot().findViewById(R.id.til_phone_main);
-        binding.mtbMain.setTitle("Имя");
-        binding.ava.setOnClickListener(new View.OnClickListener() {
+        binding.profilePicture.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
             }
         });
-        binding.mtbMain.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(getActivity(), "back", Toast.LENGTH_SHORT).show();
-            }
-        });
+        /*
         binding.mtbMain.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
@@ -55,22 +48,7 @@ public class ProfileFragment extends Fragment {
                         button.setImageResource(R.drawable.ready_icon);
                         params.anchorGravity = GravityCompat.END | Gravity.BOTTOM;
                         layout.addView(button, params);
-                        etPhone.setBoxStrokeWidth(5);
 
-                        etPhone.setEnabled(true);
-
-                        etPhone.requestFocus();
-                        button.setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View view) {
-                                etPhone.setEnabled(false);
-
-                                etPhone.setBoxStrokeWidth(0);
-
-                                item.setEnabled(true);
-                                layout.removeView(button);
-                            }
-                        });
                         break;
                     case R.id.exit:
                         Toast.makeText(getActivity(), "EXIT", Toast.LENGTH_SHORT).show();
@@ -78,6 +56,8 @@ public class ProfileFragment extends Fragment {
                 return false;
             }
         });
+        */
+
         return binding.getRoot();
     }
 }
