@@ -29,7 +29,7 @@
                 android:adjustViewBounds="true"
                 android:fitsSystemWindows="true"
                 android:scaleType="centerInside"
-                android:src="@drawable/sunset_boy"
+                android:src="@drawable/profile_background_icon1"
                 app:layout_collapseMode="parallax" />
 
             <com.google.android.material.appbar.MaterialToolbar
@@ -38,7 +38,8 @@
                 android:layout_height="wrap_content"
                 app:layout_collapseMode="pin"
                 app:menu="@menu/toolbar_menu"
-                app:title="Имя юзера" />
+                android:layout_marginLeft="50dp"
+                app:title="Username" />
         </com.google.android.material.appbar.CollapsingToolbarLayout>
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -136,10 +137,11 @@
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/light_red"
+        android:backgroundTint="@color/purple_500"
+        android:alpha="0.8"
         app:borderWidth="0dp"
         android:layout_margin="12dp"
         app:layout_anchor="@id/abl_main"
-        app:layout_anchorGravity="right|bottom"
+        app:layout_anchorGravity="left|bottom"
         android:src="@drawable/photo_camera"/>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
