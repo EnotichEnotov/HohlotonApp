@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
+    android:gravity="center_horizontal"
     android:visibility="visible"
     tools:visibility="visible">
 
@@ -21,43 +21,44 @@
         android:padding="14sp"
         android:textColor="@color/pink"
         />
+        <LinearLayout
+            android:id="@+id/toper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/image"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_alignStart="@+id/clubsname_input"
+                android:layout_alignTop="@+id/clubsname_input"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/sunset_boy"
+                app:civ_border_color="#FFC17070"
+                app:civ_border_width="2dp" />
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/image"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_alignStart="@+id/clubsname_input"
-        android:layout_alignTop="@+id/clubsname_input"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="15dp"
-        android:src="@drawable/sunset_boy"
-        app:civ_border_color="#FFC17070"
-        app:civ_border_width="2dp" />
+        <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/clubsname_input"
+                android:layout_alignEnd="@+id/image"
+                android:layout_marginTop="36dp"
+
+                android:fontFamily="@font/oswaldfamily"
+                android:text="Люда"
+                android:textColor="@color/white"
+                android:textSize="35sp" />
+    </LinearLayout>
 
     <TextView
-        android:id="@+id/name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/clubsname_input"
-        android:layout_alignEnd="@+id/image"
-        android:layout_marginLeft="168dp"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="-105dp"
-
-        android:fontFamily="@font/oswaldfamily"
-        android:text="Люда"
-        android:textColor="@color/white"
-        android:textSize="35sp" />
-
-    <TextView
+        android:layout_below="@id/toper"
         android:id="@+id/white_rect"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/clubsname_input"
-        android:layout_alignEnd="@+id/image"
-        android:layout_marginLeft="168dp"
         android:layout_marginTop="128dp"
-        android:layout_marginEnd="-269dp"
+        android:layout_centerHorizontal="true"
         android:background="@drawable/custom_edittext_white"
         android:fontFamily="@font/oswaldfamily"
         android:text="Люда"
@@ -69,10 +70,8 @@
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/clubsname_input"
-        android:layout_alignEnd="@+id/image"
-        android:layout_marginLeft="168dp"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="187dp"
-        android:layout_marginEnd="-268dp"
         android:background="@drawable/custom_edittext_white"
         android:fontFamily="@font/oswaldfamily"
         android:text="Люда"
@@ -107,14 +106,12 @@
 
     <TextView
         android:id="@+id/type"
+        android:layout_below="@id/white_rect"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/white_rect2"
-        android:layout_alignEnd="@+id/white_rect2"
-        android:layout_marginLeft="168dp"
+        android:layout_margin="15dp"
         android:layout_marginTop="-1dp"
-        android:layout_marginEnd="113dp"
-
+        android:layout_centerHorizontal="true"
         android:fontFamily="@font/oswaldfamily"
         android:text="Животные"
         android:textColor="@color/black"

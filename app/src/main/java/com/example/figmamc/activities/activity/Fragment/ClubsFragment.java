@@ -24,8 +24,8 @@ public class ClubsFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         binding = ClubsBinding.inflate(inflater);
         Club[] clubs = new Club[2];
-        clubs[0]=new Club("Tralala","10 hours","ssilka");
-        clubs[1]=new Club("Requiem","5 min","ssilka");
+        clubs[0]=new Club("Tralala","animals","ssilka");
+        clubs[1]=new Club("Requiem","nature","ssilka");
         binding.list.setAdapter(new ClubAdapter(getContext(), clubs));
         return binding.getRoot();
     }
