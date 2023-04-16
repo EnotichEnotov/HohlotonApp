@@ -5,11 +5,11 @@ import android.graphics.Bitmap;
 public class Club {
     public String name;
     public String genre;
-    public int avatarka;
+    public String photoUrl;
 
-    public Club(String name, String genre, int avatarka) {
+    public Club(String name, String genre, String photoUrl) {
         this.name = name;
         this.genre = genre;
-        this.avatarka = avatarka;
+        this.photoUrl = photoUrl;
     }
 }

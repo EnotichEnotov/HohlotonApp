@@ -14,6 +14,7 @@ import retrofit2.Response;
 
 public class PhotoViewModel extends androidx.lifecycle.ViewModel {
     private MutableLiveData<List<Photo>> _photos = new MutableLiveData<>();
+
     public LiveData<List<Photo>> photos = _photos;
     public void load(){
         PhotoRepository.getPhotos().enqueue(new Callback<List<Photo>>() {
