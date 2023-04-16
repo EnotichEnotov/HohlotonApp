@@ -30,6 +30,12 @@ public class ProfileFragment extends Fragment {
         binding = MenuProfileFragmentBinding.inflate(inflater);
         TextInputLayout etPhone = binding.getRoot().findViewById(R.id.til_phone_main);
         binding.mtbMain.setTitle("Имя");
+        binding.ava.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
         binding.mtbMain.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

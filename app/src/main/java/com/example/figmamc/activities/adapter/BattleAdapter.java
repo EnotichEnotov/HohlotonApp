@@ -24,12 +24,12 @@ public class BattleAdapter extends ArrayAdapter<Battle> {
         final Battle battle = getItem(position);
 
         if (convertView == null) {
-            convertView = LayoutInflater.from(getContext()).inflate(R.layout.clubs_item,null);
+            convertView = LayoutInflater.from(getContext()).inflate(R.layout.battles_item,null);
         }
         ((TextView) convertView.findViewById(R.id.name)).setText(String.valueOf(battle.name));
         ((TextView) convertView.findViewById(R.id.votes_num)).setText(String.valueOf(battle.votes_num));
         ((TextView) convertView.findViewById(R.id.type)).setText(String.valueOf(battle.type));
-        ((ImageView) convertView.findViewById(R.id.image)).setImageResource(battle.image);
+        //((ImageView) convertView.findViewById(R.id.image)).setImageResource(battle.image);
         return convertView;
     }
 }
