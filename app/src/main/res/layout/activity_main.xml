@@ -10,58 +10,144 @@
         android:layout_height="fill_parent"/>
     <LinearLayout
         android:id="@+id/lister"
+        android:layout_weight="1"
         android:layout_alignParentBottom="true"
-        android:gravity="bottom"
+        android:gravity="top"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-
+        android:layout_height="70dp"
+        android:layout_marginLeft="10dp"
         android:background="#FFFFFF"
         android:orientation="horizontal">
-        <ImageView
-            android:id="@+id/main_menu_icon_button_1"
-            android:src="@drawable/smile"
-            android:gravity="bottom"
-            android:layout_width="0dp"
+        <LinearLayout
+            android:layout_width="60dp"
+            android:layout_height="70dp"
+            android:orientation="vertical"
+            >
+            <ImageView
+                android:id="@+id/main_menu_icon_button_1"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:alpha="0.5"
+                android:src="@drawable/navigation_lenta"
+                android:layout_gravity="center"
+                android:textColor="@color/purple_500"
+                android:textSize="28sp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:textSize="15sp"
+                android:textAlignment="center"
+                android:textColor="@color/grey"
+                android:text="Лента"
+                ></TextView>
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="60dp"
+            android:layout_height="70dp"
+            android:orientation="vertical"
             android:layout_weight="1"
-            android:layout_height="match_parent"
-            android:textSize="28sp"
-            android:textColor="@color/purple_500"/>
-        <ImageView
-            android:id="@+id/main_menu_icon_button_2"
-            android:src="@drawable/smile"
-            android:gravity="bottom"
+            >
+            <ImageView
+                android:id="@+id/main_menu_icon_button_2"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:alpha="0.5"
+                android:layout_gravity="center"
+                android:src="@drawable/navigation_clubs"
+                android:textColor="@color/purple_500"
+                android:textSize="28sp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:textSize="15sp"
+                android:textAlignment="center"
+                android:textColor="@color/grey"
+                android:text="Клубы"
+                ></TextView>
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="60dp"
+            android:layout_height="70dp"
+            android:orientation="vertical"
             android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:textSize="28sp"
-            android:textColor="@color/purple_500"/>
-        <ImageView
             android:id="@+id/adder"
-            android:src="@drawable/plus"
-            android:gravity="bottom"
+            >
+            <ImageView
+                android:id="@+id/main_menu_icon_button_3"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:alpha="0.5"
+                android:src="@drawable/navigation_add"
+                android:textColor="@color/purple_500"
+                android:textSize="28sp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:textSize="15sp"
+                android:textAlignment="center"
+                android:textColor="@color/grey"
+                android:text="Добавить"
+                ></TextView>
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="60dp"
+            android:layout_height="70dp"
             android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:textSize="28sp"
-            android:textColor="@color/purple_500"/>
-        <ImageView
-            android:id="@+id/main_menu_icon_button_3"
-            android:src="@drawable/smile"
-            android:gravity="bottom"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            >
+            <ImageView
+                android:id="@+id/main_menu_icon_button_4"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:alpha="0.5"
+                android:layout_gravity="center"
+                android:src="@drawable/smile"
+                android:textColor="@color/purple_500"
+                android:textSize="28sp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:textSize="15sp"
+                android:textAlignment="center"
+                android:textColor="@color/grey"
+                android:text="Битва"
+                ></TextView>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="60dp"
+            android:layout_height="70dp"
             android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:textSize="28sp"
-            android:textColor="@color/purple_500"/>
-        <ImageView
-            android:id="@+id/main_menu_icon_button_4"
-            android:src="@drawable/smile"
-            android:gravity="bottom"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:textSize="28sp"
-            android:textColor="@color/purple_500"/>
+            android:orientation="vertical"
+            >
+            <ImageView
+                android:id="@+id/main_menu_icon_button_5"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:alpha="0.5"
+                android:src="@drawable/navigation_profile"
+                android:textColor="@color/purple_500"
+                android:layout_gravity="center"
+                android:textSize="28sp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:textSize="15sp"
+                android:textAlignment="center"
+                android:textColor="@color/grey"
+                android:text="Профиль"
+                ></TextView>
+        </LinearLayout>
 
     </LinearLayout>
 </RelativeLayout>
