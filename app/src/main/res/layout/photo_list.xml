@@ -2,8 +2,13 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_margin="20dp"
-    android:background="@drawable/border_post"
-    android:layout_height="match_parent">
+    android:layout_height="380dp">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/lenta_notes_background"
+        android:alpha="0.5"
+        ></ImageView>
     <View
         android:id="@+id/invisible"
         android:layout_width="match_parent"
@@ -40,7 +45,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Красота"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:layout_below="@id/line"
         android:textSize="30dp"/>
     <ImageView
@@ -54,16 +59,17 @@
         android:id="@+id/likes_comm"
         android:layout_below="@id/post"
         android:layout_width="match_parent"
+
         android:layout_height="wrap_content">
         <ImageView
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:layout_marginLeft="20dp"
-            android:src="@drawable/smile"/>
+            android:src="@drawable/heart_not_activated"/>
         <ImageView
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:layout_marginLeft="20dp"
-            android:src="@drawable/smile"/>
+            android:src="@drawable/comment_icon"/>
     </LinearLayout>
 </RelativeLayout>
