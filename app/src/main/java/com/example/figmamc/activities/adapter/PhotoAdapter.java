@@ -23,7 +23,7 @@ public class PhotoAdapter extends RecyclerView.Adapter<PhotoHolder> {
     @Override
     public PhotoHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         PhotoListBinding binding = PhotoListBinding.inflate(LayoutInflater.from(parent.getContext()));
-        return new PhotoHolder(binding,listener);
+        return new PhotoHolder(binding,parent.getContext());
     }
 
     @Override
