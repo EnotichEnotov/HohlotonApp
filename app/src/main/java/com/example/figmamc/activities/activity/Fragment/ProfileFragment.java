@@ -29,8 +29,6 @@ public class ProfileFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         binding = MenuProfileFragmentBinding.inflate(inflater);
         TextInputLayout etPhone = binding.getRoot().findViewById(R.id.til_phone_main);
-        TextInputLayout etEmail = binding.getRoot().findViewById(R.id.til_email_main);
-        TextInputLayout etInfo = binding.getRoot().findViewById(R.id.til_info_main);
         binding.mtbMain.setTitle("Имя");
         binding.mtbMain.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
@@ -47,27 +45,22 @@ public class ProfileFragment extends Fragment {
                         FloatingActionButton button = new FloatingActionButton(getActivity());
                         CoordinatorLayout layout = binding.getRoot().findViewById(R.id.coordinatorLayout_main);
                         CoordinatorLayout.LayoutParams params = new CoordinatorLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-                        params.setAnchorId(R.id.til_info_main);
                         button.setTranslationY(200);
                         button.setImageResource(R.drawable.ready_icon);
                         params.anchorGravity = GravityCompat.END | Gravity.BOTTOM;
                         layout.addView(button, params);
                         etPhone.setBoxStrokeWidth(5);
-                        etEmail.setBoxStrokeWidth(5);
-                        etInfo.setBoxStrokeWidth(5);
+
                         etPhone.setEnabled(true);
-                        etEmail.setEnabled(true);
-                        etInfo.setEnabled(true);
+
                         etPhone.requestFocus();
                         button.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View view) {
                                 etPhone.setEnabled(false);
-                                etEmail.setEnabled(false);
-                                etInfo.setEnabled(false);
+
                                 etPhone.setBoxStrokeWidth(0);
-                                etEmail.setBoxStrokeWidth(0);
-                                etInfo.setBoxStrokeWidth(0);
+
                                 item.setEnabled(true);
                                 layout.removeView(button);
                             }

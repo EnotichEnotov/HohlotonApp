@@ -78,60 +78,13 @@
                 app:layout_constraintEnd_toStartOf="@+id/gl_end"
                 app:layout_constraintStart_toStartOf="@+id/gl_start"
                 app:layout_constraintTop_toBottomOf="@id/abl_main">
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@color/white"
-                    android:inputType="phone"
-                    android:text="88005553535"
-                    android:textColor="@color/black"
-                    android:textSize="16sp"/>
+
             </com.google.android.material.textfield.TextInputLayout>
 
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/til_email_main"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:enabled="false"
-                android:hint="@string/email"
-                app:boxStrokeColor="@color/blue"
-                app:boxStrokeWidth="0dp"
-                app:endIconMode="clear_text"
-                app:layout_constraintEnd_toStartOf="@+id/gl_end"
-                app:layout_constraintStart_toStartOf="@+id/gl_start"
-                app:layout_constraintTop_toBottomOf="@id/til_phone_main">
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@color/white"
-                    android:text="email"
-                    android:textColor="@color/black"
-                    android:textSize="16sp"/>
-            </com.google.android.material.textfield.TextInputLayout>
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/til_info_main"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:enabled="false"
-                android:hint="@string/info"
-                app:boxStrokeColor="@color/blue"
-                app:boxStrokeWidth="0dp"
-                app:endIconMode="clear_text"
-                app:layout_constraintEnd_toStartOf="@+id/gl_end"
-                app:counterEnabled="true"
-                app:counterMaxLength="500"
-                app:layout_constraintStart_toStartOf="@+id/gl_start"
-                app:layout_constraintTop_toBottomOf="@id/til_email_main">
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@color/white"
-                    android:text="information"
-                    android:textColor="@color/black"
-                    android:textSize="16sp"/>
-            </com.google.android.material.textfield.TextInputLayout>
+
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>
     <com.google.android.material.floatingactionbutton.FloatingActionButton

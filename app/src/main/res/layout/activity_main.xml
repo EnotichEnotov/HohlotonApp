@@ -27,13 +27,14 @@
                 android:id="@+id/main_menu_icon_button_1"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:alpha="0.5"
+                android:alpha="0.4"
                 android:src="@drawable/navigation_lenta"
                 android:layout_gravity="center"
                 android:textColor="@color/purple_500"
                 android:textSize="28sp" />
             <TextView
                 android:layout_width="match_parent"
+                android:id="@+id/main_text_icon_button_1"
                 android:layout_height="20dp"
                 android:textSize="15sp"
                 android:textAlignment="center"
@@ -54,7 +55,7 @@
                 android:id="@+id/main_menu_icon_button_2"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:alpha="0.5"
+                android:alpha="0.4"
                 android:layout_gravity="center"
                 android:src="@drawable/navigation_clubs"
                 android:textColor="@color/purple_500"
@@ -65,6 +66,7 @@
                 android:textSize="15sp"
                 android:textAlignment="center"
                 android:textColor="@color/grey"
+                android:id="@+id/main_text_icon_button_2"
                 android:text="Клубы"
                 ></TextView>
         </LinearLayout>
@@ -83,7 +85,7 @@
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_gravity="center"
-                android:alpha="0.5"
+                android:alpha="0.4"
                 android:src="@drawable/navigation_add"
                 android:textColor="@color/purple_500"
                 android:textSize="28sp" />
@@ -93,6 +95,7 @@
                 android:textSize="15sp"
                 android:textAlignment="center"
                 android:textColor="@color/grey"
+                android:id="@+id/main_text_icon_button_3"
                 android:text="Добавить"
                 ></TextView>
         </LinearLayout>
@@ -110,7 +113,7 @@
                 android:id="@+id/main_menu_icon_button_4"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:alpha="0.5"
+                android:alpha="0.4"
                 android:layout_gravity="center"
                 android:src="@drawable/smile"
                 android:textColor="@color/purple_500"
@@ -120,6 +123,7 @@
                 android:layout_height="20dp"
                 android:textSize="15sp"
                 android:textAlignment="center"
+                android:id="@+id/main_text_icon_button_4"
                 android:textColor="@color/grey"
                 android:text="Битва"
                 ></TextView>
@@ -134,7 +138,7 @@
                 android:id="@+id/main_menu_icon_button_5"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:alpha="0.5"
+                android:alpha="0.4"
                 android:src="@drawable/navigation_profile"
                 android:textColor="@color/purple_500"
                 android:layout_gravity="center"
@@ -144,6 +148,7 @@
                 android:layout_height="20dp"
                 android:textSize="15sp"
                 android:textAlignment="center"
+                android:id="@+id/main_text_icon_button_5"
                 android:textColor="@color/grey"
                 android:text="Профиль"
                 ></TextView>
