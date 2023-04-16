@@ -1,2 +1,2 @@
 # HohlotonApp
-Презентация проекта: https://docs.google.com/presentation/d/1YKL5NLm_K5XhoSOtu82NXs2ULiP6sZYSezpV3BFg7YI/edit#slide=id.g22c78d59360_0_268
+Презентация проекта: https://docs.google.com/presentation/d/1dh_zPUKT_cgY5ezv2cwyP3RS9053heEErf9LoPCGk6w/edit#slide=id.p6
