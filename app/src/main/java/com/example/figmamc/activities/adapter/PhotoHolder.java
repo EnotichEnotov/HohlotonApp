@@ -1,6 +1,7 @@
 package com.example.figmamc.activities.adapter;
 
 import android.content.Context;
+import android.net.Uri;
 import android.util.Log;
 
 import androidx.recyclerview.widget.RecyclerView;
@@ -17,7 +18,6 @@ public class PhotoHolder extends RecyclerView.ViewHolder {
     private PhotoListBinding binding;
     private final Context context;
     private final String pathToImageStorage = "gs://battle-867f7.appspot.com";
-    FirebaseStorage firebaseStorage = FirebaseStorage.getInstance(pathToImageStorage);
     private PhotoClickListener listener;
     public PhotoHolder(PhotoListBinding binding, Context context) {
         super(binding.getRoot());
@@ -33,7 +33,8 @@ public class PhotoHolder extends RecyclerView.ViewHolder {
         }
         catch (Exception e){e.printStackTrace();
             Log.e("RER",item.getUserId()+"");}
+        FirebaseStorage firebaseStorage = FirebaseStorage.getInstance(pathToImageStorage);
         StorageReference reference = firebaseStorage.getReference(item.getPhotoUrl());
-        Glide.with(context).load(reference).into(binding.post);
+        Glide.with(context).load(Uri.parse("https://www.tulazoo.ru/media/k2/items/cache/ea82697ed9755e975f3c7d735db2070c_M.jpg")).into(binding.post);
     }
 }

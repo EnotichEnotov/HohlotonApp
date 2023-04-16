@@ -12,6 +12,7 @@
         android:layout_below="@id/pv_camera"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:inputType="text"
         android:textColor="@color/black"
         android:hint="Введите сюда сообщение записи"/>
     <Button
