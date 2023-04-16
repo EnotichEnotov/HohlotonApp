@@ -3,4 +3,6 @@
     <string name="email">Email</string>
     <string name="phone">Телефон</string>
     <string name="info">Информация</string>
+    <string name="search_club">Поиск клубов</string>
+    <string name="clubs">Клубы</string>
 </resources>

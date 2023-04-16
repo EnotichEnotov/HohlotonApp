@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/clubs"
+        android:layout_width="match_parent"
+        android:layout_height="112dp"
+        android:layout_centerVertical="false"
+        android:fontFamily="@font/oswaldfamily"
+        android:gravity="center"
+        android:text="Клубы"
+        android:textColor="@color/pink"
+        android:textSize="60sp" />
+
+
+
+    <EditText
+        android:id="@+id/clubsname_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/clubs"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="20dp"
+        android:autofillHints="true"
+        android:background="@drawable/custom_edittext_pink"
+        android:fontFamily="@font/oswaldfamily"
+        android:gravity="center"
+        android:hint="@string/search_club"
+        android:inputType="text"
+        android:padding="14sp"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
+        android:textSize="30sp" />
+
+    <ImageView
+        android:id="@+id/avatarka"
+        android:layout_width="44dp"
+        android:layout_height="47dp"
+        android:layout_below="@+id/clubs"
+        android:layout_alignStart="@+id/clubsname_input"
+        android:layout_alignBottom="@+id/clubsname_input"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/search_icon"
+        android:backgroundTint="@color/white" />
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_below="@id/clubsname_input"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+</RelativeLayout>

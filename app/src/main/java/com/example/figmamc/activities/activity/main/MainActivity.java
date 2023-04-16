@@ -17,6 +17,7 @@ import android.widget.RelativeLayout;
 import com.example.figmamc.activities.Entity.Photo;
 import com.example.figmamc.activities.Services.PhotoApiService;
 import com.example.figmamc.activities.activity.CameraActivity;
+import com.example.figmamc.activities.activity.Fragment.ClubsFragment;
 import com.example.figmamc.activities.activity.Fragment.PhotoFragment;
 import com.example.figmamc.activities.activity.Fragment.ProfileFragment;
 import com.example.figmamc.databinding.ActivityMainBinding;
@@ -156,7 +157,7 @@ public class MainActivity extends AppCompatActivity {
                 case 0:
                     return new PhotoFragment();
                 case 1:
-                    return new ProfileFragment();
+                    return new ClubsFragment();
                 case 2:
                     return new ProfileFragment();
                 case 3:
