@@ -115,7 +115,7 @@
                 android:layout_height="40dp"
                 android:alpha="0.4"
                 android:layout_gravity="center"
-                android:src="@drawable/smile"
+                android:src="@drawable/navigation_battle"
                 android:textColor="@color/purple_500"
                 android:textSize="28sp" />
             <TextView
